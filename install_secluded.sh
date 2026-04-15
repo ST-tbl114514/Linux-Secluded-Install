@@ -16,26 +16,13 @@ echo -e "${BLUE}================================${NC}"
 echo ""
 
 if [ -d "$INSTALL_DIR" ]; then
-    echo -e "${YELLOW}检测到已安装 Secluded${NC}"
-    read -p "是否重新安装？(y/n): " reinstall
-    if [ "$reinstall" != "y" ]; then
-        echo -e "${RED}安装已取消${NC}"
-        exit 0
-    fi
-    echo -e "${YELLOW}正在删除旧版本...${NC}"
+    echo -e "${YELLOW}检测到已安装 Secluded，正在删除旧版本...${NC}"
     rm -rf "$INSTALL_DIR"
 fi
 
-echo -e "${GREEN}准备安装 Secluded...${NC}"
+echo -e "${GREEN}开始自动安装 Secluded...${NC}"
 echo ""
-read -p "确认安装？(y/n): " confirm
 
-if [ "$confirm" != "y" ]; then
-    echo -e "${RED}安装已取消${NC}"
-    exit 0
-fi
-
-echo ""
 echo -e "${GREEN}[1/7] 检查依赖...${NC}"
 if ! command -v git &> /dev/null; then
     echo -e "${YELLOW}正在安装 git...${NC}"
