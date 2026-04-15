@@ -7,7 +7,7 @@ BLUE='\033[0;34m'
 NC='\033[0m'
 
 INSTALL_DIR="/root/Secluded"
-REPO_URL="https://hk.gh-proxy.org/https://github.com/MCSQNXY/Secluded-arm64-linux.git"
+REPO_URL="https://gh.llkk.cc/https://github.com/MCSQNXY/Secluded-arm64-linux.git"
 
 clear
 echo -e "${BLUE}================================${NC}"
